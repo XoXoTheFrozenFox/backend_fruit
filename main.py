@@ -1,4 +1,3 @@
-# app.py
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import JSONResponse
 import torch
@@ -7,9 +6,13 @@ from PIL import Image
 import numpy as np
 import os
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Define the path to the model
-MODEL_PATH = 'C:/CODE/Code/CODE ON GITHUB/FruitWebAppF_B/backend_fruit/fruit_classifier.pth'
+MODEL_PATH = os.getenv('MODEL_PATH')
 
 # Load the model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
