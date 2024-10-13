@@ -1,0 +1,1 @@
+curl -X POST "http://127.0.0.1:8000/predict/" -F "file=@C:/CODE/Code/CODE ON GITHUB/AI-Fresh_Mild_Rotten_Fruit_Classification/Dataset3/test/Banana Good/Image5.png"
